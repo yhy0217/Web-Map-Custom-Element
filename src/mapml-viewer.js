@@ -2,6 +2,7 @@ import './leaflet.js';  // bundled with proj4, proj4leaflet, modularized
 import './mapml.js';   
 import { MapLayer } from './layer.js';
 import { MapCaption } from './map-caption.js';
+import { MapFeature } from './map-feature.js';
 
 export class MapViewer extends HTMLElement {
   static get observedAttributes() {
@@ -862,3 +863,4 @@ export class MapViewer extends HTMLElement {
 window.customElements.define('mapml-viewer', MapViewer);
 window.customElements.define('layer-', MapLayer);
 window.customElements.define('map-caption',MapCaption);
+window.customElements.define('map-feature', MapFeature);

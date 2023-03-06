@@ -26,6 +26,7 @@ module.exports = function(grunt) {
           'dist/web-map.js':      ['src/web-map.js'],
           'dist/mapml-viewer.js': ['src/mapml-viewer.js'],
           'dist/map-caption.js':  ['src/map-caption.js'],
+          'dist/map-feature.js':  ['src/map-feature.js'],
           'dist/map-area.js':     ['src/map-area.js'],
           'dist/layer.js':        ['src/layer.js'],
           'dist/leaflet.js':      ['dist/leaflet-src.js',

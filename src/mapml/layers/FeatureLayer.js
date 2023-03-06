@@ -224,7 +224,7 @@ export var FeatureLayer = L.FeatureGroup.extend({
         feature = features[i];
         var geometriesExist = feature.getElementsByTagName("map-geometry").length && feature.getElementsByTagName("map-coordinates").length;
         if (geometriesExist) {
-         this.addData(feature, nativeCS, nativeZoom);
+         feature._featureLayer = this.addData(feature, nativeCS, nativeZoom);
         }
        }
        return this; //if templated this runs
@@ -267,10 +267,10 @@ export var FeatureLayer = L.FeatureGroup.extend({
           } else{
             this._features[featureZoom]=[layer];
           }
-          return;
         } else {
-          return this.addLayer(layer);
+          this.addLayer(layer);
         }
+        return layer;
       }
     },
         
